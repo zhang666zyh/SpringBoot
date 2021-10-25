@@ -1,0 +1,69 @@
+::-webkit-scrollbar{
+    background-color:transparent;
+    display:none;
+}
+
+.container{
+    width:50vw;
+    height: 50vh;
+    background-color:#eee;
+    margin:30vh 25vw;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/*将提交按钮和输入框分隔开*/
+.useBr{
+    width:auto;
+    height:20px;
+}
+
+.topNav{
+    width:556.23px;
+    height:40px;
+    background-color:#bcdee7;
+    border-radius:5px;
+    margin-bottom:20px;
+    color:mediumpurple;
+}
+
+/*全体设置为左浮动,以此达到横向布局的目的*/
+.topNav ul li{
+    float:left;
+    margin-top:10px;
+}
+
+/*根据实际情况将这几个margin设置不同的margin-left*/
+.topNav ul li:nth-child(1){
+    margin-left:20px;
+}
+
+.topNav ul li:nth-child(2){
+    margin-left:70px;
+}
+
+.topNav ul li:nth-child(3){
+    margin-left:70px;
+}
+
+/*将结果放到一个圆中*/
+.result{
+    width:70px;
+    height:70px;
+    background-color:greenyellow;
+    border-radius:50%;
+    margin-top:20px;
+    margin-left:243.115px;
+
+    /*让结果在圆球中居中*/
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container .result strong p{
+    color:white;
+    font-size:20px;
+}
