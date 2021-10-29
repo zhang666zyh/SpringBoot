@@ -1,0 +1,165 @@
+::-webkit-scrollbar{
+    background-color:transparent;
+    display:none;
+}
+
+.container{
+    width:95vw;
+    height:95vh;
+    background-color:darkturquoise;
+    border-radius:20px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.container .header{
+    color:white;
+    font-size:90px;
+    position:absolute;
+    left:50%;
+    top:20%;
+    transform:translate(-50%,-50%);
+}
+
+#name{
+    color:orange;
+    font-size:40px;
+    position:absolute;
+    left:50%;
+    top:45%;
+    transform:translate(-50%,-50%);
+}
+
+#name::before{
+    content:'';
+    width:250px;
+    height:250px;
+    background-color:rgba(238, 238, 238,.5);
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border-radius:40px;
+    animation:goRun 5s linear infinite;
+}
+
+@keyframes goRun{
+    100%{
+        transform:translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+#states{
+    width:200px;
+    height:150px;
+    background-color:rgba(238, 238, 238,.5);
+    border-radius:40px;
+    position:absolute;
+    left:50%;
+    top:60%;
+    transform:translate(-50%,-50%);
+}
+
+#tijiao{
+    position:absolute;
+    left:50%;
+    top:75%;
+    transform:translate(-50%,-50%);
+    width:100px;
+    height:40px;
+    background-color:#eee;
+    border:2px skyblue solid;
+    border-radius:40px;
+    color:skyblue;
+    font-size:20px;
+}
+
+#tijiao:hover{
+    background-color:skyblue;
+    color:#eee;
+}
+
+.container .states .state{
+    display:block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+#startBtn{
+    width:200px;
+    height:80px;
+    background-color:#eee;
+    position:absolute;
+    left:30%;
+    top:70%;
+    transform:translate(-50%,-50%);
+    border:3px skyblue solid;
+    border-radius:40px;
+    color:skyblue;
+    font-size:20px;
+}
+
+#endBtn{
+    width:200px;
+    height:80px;
+    background-color:#eee;
+    position:absolute;
+    left:70%;
+    top:70%;
+    transform:translate(-50%,-50%);
+    border:3px skyblue solid;
+    border-radius:40px;
+    color:skyblue;
+    font-size:20px;
+}
+
+#startBtn:hover{
+    background-color:skyblue;
+    color:#eee;
+}
+
+#endBtn:hover{
+    background-color:skyblue;
+    color:#eee;
+}
+
+.container .exportToFile{
+    /* width:200px;
+    height:100px;
+    background-color:#eee;
+    border-radius:40px; */
+    position:absolute;
+    left:85%;
+    top:15%;
+}
+
+#exportToExcel{
+    width:140px;
+    height:40px;
+    background-color:#eee;
+    border:2px skyblue solid;
+    border-radius:40px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color:skyblue;
+}
+
+#exportToExcel:hover{
+    color:white;
+    background-color:skyblue;
+}
+
+.container .create{
+    position:absolute;
+    left:50%;
+    top:90%;
+    transform:translate(-50%,-50%);
+    color:#fba;
+    font-size:20px;
+}
