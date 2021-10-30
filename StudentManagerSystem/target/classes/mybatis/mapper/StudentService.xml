@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhang.service.StudentService">
+    <select id="getStudentById" parameterType="int" resultType="com.zhang.pojo.Student">
+        select * from student where id = #{id}
+    </select>
+    <select id="getStudentList" resultType="com.zhang.pojo.Student">
+        select * from student
+    </select>
+    <insert id="addStudent" parameterType="com.zhang.pojo.Student">
+        <if test="sex == '1'.toString()">
+            insert into student (name,schoolNumber,IdCard,sex,birthday) values (#{name},#{schoolNumber},#{IdCard},'男',#{birthday})
+        </if>
+        <if test="sex == '0'.toString()">
+            insert into student (name,schoolNumber,IdCard,sex,birthday) values (#{name},#{schoolNumber},#{IdCard},'女',#{birthday})
+        </if>
+    </insert>
+    <update id="updateStudent" parameterType="com.zhang.pojo.Student">
+        <if test="sex == '1'.toString()">
+            update student set name=#{name},schoolNumber=#{schoolNumber},IdCard=#{IdCard},sex='男',birthday=#{birthday} where id = #{id}
+        </if>
+        <if test="sex == '0'.toString()">
+            update student set name=#{name},schoolNumber=#{schoolNumber},IdCard=#{IdCard},sex='女',birthday=#{birthday} where id = #{id}
+        </if>
+    </update>
+    <delete id="deleteStudent" parameterType="int">
+        delete from student where id = #{id}
+    </delete>
+</mapper>
